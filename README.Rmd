@@ -1,0 +1,54 @@
+---
+title: "README"
+author: "Nicky Sanders"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Exploratory Analysis of Professional MMA Data
+
+This is my first exploratory data analysis (EDA) done in R. I explore different relationships of professional MMA fighter data.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Data](#data)
+- [Analysis](#analysis)
+- [Results](#results)
+- [Contributing](#contributing)
+
+## Installation
+
+View "MMA Exploratory Analysis.R" to see the source code that was the basis of the final markdown file. Some commentary is kept in the code to provide context and prevent the reader from having to check the .rmd file for reasoning behind some of the functions performed. Note that not all of the code in the .R file is used in the final EDA markdown document but the code was kept for potential exploration or development at a later date.
+
+View "MMA Exploratory Analysis.Rmd" to knit the EDA in your own browser. 
+
+View "MMA Exploratory Analysis.pdf" to read/save/share the EDA without running any code. Formatting was troublesome. So, excuse the untimely page breaks and extended blank spaces.
+
+
+
+## Usage
+
+The "MMA Exploratory Analysis.R" file has all the code needed to produce the same results shown in the .rmd file. Replicating my process verbatim requires downloading the data from the source below (called 'mma_master' in the SQL code block of the .rmd file), running the listed SQL queries on it, and saving the results of the query locally as 'mma_data_filtered'. In your IDE of choice, running the first R code block with 'mma_data_filtered' will allow you to replicate results (after installing packages, etc.).
+
+## Data
+
+Data sourced from kaggle [here](https://www.kaggle.com/datasets/danmcinerney/mma-differentials-and-elo).
+Data is comprised of fight data since the inception of professional MMA in 1994 through part of the year 2022. 
+
+## Analysis
+
+The analysis explored the evolution of MMA popularity, examining topics such as the weight classes that produce the most KO/TKO outcomes and the difference between male and female divisions. 
+
+## Results
+
+Through Pearson's chi-square test, a moderate association between weight divisions and fight outcomes was identified. The analysis showed a somewhat positive correlation between a fighter's weight and likelihood of a KO/TKO finish, and a higher proportion of fights ending in decision among female fighters than male fighters. Overall, the analysis suggests that weight division might have some influence on the method of victory, but the effect size is small.
+
+## Contributing
+
+I welcome suggestions for any relationships you'd like to see explored on the next iteration of analysis on this data.
